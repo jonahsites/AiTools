@@ -12,6 +12,7 @@ import {
   MousePointerClick 
 } from "lucide-react";
 import { MoneyPage, AffiliateProduct, CategoryHub } from "../types";
+import { RelatedArticles } from "./RelatedArticles";
 
 interface AffiliateMoneyPageProps {
   page: MoneyPage;
@@ -529,6 +530,9 @@ export default function AffiliateMoneyPage({
           </div>
         </div>
       )}
+
+      {/* Related Articles Block */}
+      <RelatedArticles currentPath={`/${page.slug}`} onNavigateToPage={onNavigateToPage} />
 
       {/* Final Summary/Verdict block */}
       <div className="bg-[#1F1D1A] border-t-2 border-[#B85C38] pt-6 pb-4">

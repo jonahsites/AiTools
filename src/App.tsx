@@ -15,7 +15,8 @@ import {
   Sliders, 
   FolderLock, 
   Award,
-  Globe
+  Globe,
+  Compass
 } from "lucide-react";
 
 import { 
@@ -33,6 +34,7 @@ import AffiliateMoneyPage from "./components/AffiliateMoneyPage";
 import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
 import CategoriesPage from "./components/CategoriesPage";
+import SEOStrategyPage from "./components/SEOStrategyPage";
 
 export default function App() {
   // Application Data States (retains generated content in real-time)
@@ -44,6 +46,7 @@ export default function App() {
 
   // Interaction Navigation States
   const [activeMainTab, setActiveMainTab] = useState<"visitor" | "cluster">("visitor");
+  const [activeAdminSubTab, setActiveAdminSubTab] = useState<"generation" | "seo-playbook">("generation");
   const [selectedCategorySlug, setSelectedCategorySlug] = useState<string>("all");
   const [selectedMoneyPageSlug, setSelectedMoneyPageSlug] = useState<string | null>(() => {
     // Detect page slug directly from URL sub-path on first load
@@ -185,6 +188,14 @@ export default function App() {
               >
                 Contact
               </button>
+              <button 
+                onClick={() => { navigateToPage("seo-strategy"); }}
+                className={`hover:text-white transition-colors duration-150 ${
+                  selectedMoneyPageSlug === "seo-strategy" ? "text-[#B85C38]" : ""
+                }`}
+              >
+                SEO Strategy
+              </button>
             </nav>
           )}
 
@@ -232,6 +243,9 @@ export default function App() {
                   }
                   if (selectedMoneyPageSlug === "contact") {
                     return <ContactPage onBackToHub={() => navigateToPage(null)} />;
+                  }
+                  if (selectedMoneyPageSlug === "seo-strategy") {
+                    return <SEOStrategyPage onBackToHub={() => navigateToPage(null)} />;
                   }
                   if (selectedMoneyPageSlug === "categories") {
                     return (
@@ -528,37 +542,68 @@ export default function App() {
               </p>
             </div>
 
-            {/* Split Grid: Generator Console + Topology mapping */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              
-              {/* Generator control inputs (Left column) */}
-              <div className="lg:col-span-8">
-                <GeneratorDashboard
-                  keywordPlan={keywordPlan}
-                  templates={templates}
-                  affiliateProducts={products}
-                  moneyPages={moneyPages}
-                  onAddGeneratedPage={handleAddGeneratedPage}
-                  onUpdateKeywordStatus={handleUpdateKeywordStatus}
-                  onUpdateProducts={handleUpdateProducts}
-                  activeTab="generation"
-                  setActiveTab={() => {}}
-                />
-              </div>
-
-              {/* Dynamic visual graph tree / passing of topical juice (Right column) */}
-              <div className="lg:col-span-4 h-full">
-                <SitemapGraph
-                  categories={categories}
-                  moneyPages={moneyPages}
-                  onSelectPage={(slug) => {
-                    navigateToPage(slug);
-                    setActiveMainTab("visitor");
-                  }}
-                />
-              </div>
-
+            {/* Sub Tabs Inside System Panel */}
+            <div className="flex border-b border-[#3C3A36] gap-2 pb-0.5">
+              <button
+                onClick={() => setActiveAdminSubTab("generation")}
+                className={`px-4 py-2 font-mono text-[10px] tracking-wider uppercase border-t-2 transition-all ${
+                  activeAdminSubTab === "generation"
+                    ? "border-[#B85C38] text-white bg-[#1a1816]/30 font-bold"
+                    : "border-transparent text-[#8C8678] hover:text-white"
+                }`}
+              >
+                1. Programmatic Builder &amp; Pipeline
+              </button>
+              <button
+                onClick={() => setActiveAdminSubTab("seo-playbook")}
+                className={`px-4 py-2 font-mono text-[10px] tracking-wider uppercase border-t-2 transition-all flex items-center gap-1.5 ${
+                  activeAdminSubTab === "seo-playbook"
+                    ? "border-[#B85C38] text-white bg-[#1a1816]/30 font-bold"
+                    : "border-transparent text-[#8C8678] hover:text-white"
+                }`}
+              >
+                <Compass className="w-3.5 h-3.5" />
+                2. 2026 Student AI SEO Playbook
+              </button>
             </div>
+
+            {activeAdminSubTab === "generation" ? (
+              /* Split Grid: Generator Console + Topology mapping */
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                
+                {/* Generator control inputs (Left column) */}
+                <div className="lg:col-span-8">
+                  <GeneratorDashboard
+                    keywordPlan={keywordPlan}
+                    templates={templates}
+                    affiliateProducts={products}
+                    moneyPages={moneyPages}
+                    onAddGeneratedPage={handleAddGeneratedPage}
+                    onUpdateKeywordStatus={handleUpdateKeywordStatus}
+                    onUpdateProducts={handleUpdateProducts}
+                    activeTab="generation"
+                    setActiveTab={() => {}}
+                  />
+                </div>
+
+                {/* Dynamic visual graph tree / passing of topical juice (Right column) */}
+                <div className="lg:col-span-4 h-full">
+                  <SitemapGraph
+                    categories={categories}
+                    moneyPages={moneyPages}
+                    onSelectPage={(slug) => {
+                      navigateToPage(slug);
+                      setActiveMainTab("visitor");
+                    }}
+                  />
+                </div>
+
+              </div>
+            ) : (
+              <div className="bg-[#1F1D1A] border border-[#3C3A36] p-6">
+                <SEOStrategyPage />
+              </div>
+            )}
 
           </div>
         )}
@@ -578,6 +623,7 @@ export default function App() {
             <button onClick={() => { navigateToPage("categories"); }} className="hover:text-white transition-all uppercase font-mono text-left">Categories</button>
             <button onClick={() => { navigateToPage("about"); }} className="hover:text-white transition-all uppercase font-mono text-left">About Us</button>
             <button onClick={() => { navigateToPage("contact"); }} className="hover:text-white transition-all uppercase font-mono text-left">Contact</button>
+            <button onClick={() => { navigateToPage("seo-strategy"); }} className="hover:text-[#B85C38] text-white underline decoration-[#B85C38] transition-all uppercase font-mono text-left">SEO Strategy</button>
           </div>
         </div>
       </footer>

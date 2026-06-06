@@ -30,6 +30,9 @@ import { MoneyPage, AffiliateProduct, CategoryHub, KeywordPlanItem } from "./typ
 import GeneratorDashboard from "./components/GeneratorDashboard";
 import SitemapGraph from "./components/SitemapGraph";
 import AffiliateMoneyPage from "./components/AffiliateMoneyPage";
+import AboutPage from "./components/AboutPage";
+import ContactPage from "./components/ContactPage";
+import CategoriesPage from "./components/CategoriesPage";
 
 export default function App() {
   // Application Data States (retains generated content in real-time)
@@ -147,6 +150,44 @@ export default function App() {
             </h1>
           </div>
 
+          {/* Main Visitor Navigation Bar */}
+          {activeMainTab === "visitor" && (
+            <nav className="flex items-center gap-5 font-mono text-[11px] tracking-wider uppercase font-bold text-[#8C8678]">
+              <button 
+                onClick={() => { navigateToPage("homepage"); setSelectedCategorySlug("all"); }}
+                className={`hover:text-white transition-colors duration-150 ${
+                  (selectedMoneyPageSlug === null || selectedMoneyPageSlug === "homepage") ? "text-[#B85C38]" : ""
+                }`}
+              >
+                Homepage
+              </button>
+              <button 
+                onClick={() => { navigateToPage("categories"); }}
+                className={`hover:text-white transition-colors duration-150 ${
+                  selectedMoneyPageSlug === "categories" ? "text-[#B85C38]" : ""
+                }`}
+              >
+                Categories
+              </button>
+              <button 
+                onClick={() => { navigateToPage("about"); }}
+                className={`hover:text-white transition-colors duration-150 ${
+                  selectedMoneyPageSlug === "about" ? "text-[#B85C38]" : ""
+                }`}
+              >
+                About
+              </button>
+              <button 
+                onClick={() => { navigateToPage("contact"); }}
+                className={`hover:text-white transition-colors duration-150 ${
+                  selectedMoneyPageSlug === "contact" ? "text-[#B85C38]" : ""
+                }`}
+              >
+                Contact
+              </button>
+            </nav>
+          )}
+
           {/* High Contrast Mode Nav Switch UI */}
           <div className="flex items-center gap-3">
             <button
@@ -183,9 +224,32 @@ export default function App() {
           <div className="space-y-8">
             
             {/* Breadcrumb back links inside specific money page details */}
-            {selectedMoneyPageSlug ? (
+            {selectedMoneyPageSlug && selectedMoneyPageSlug !== "homepage" ? (
               <div>
                 {(() => {
+                  if (selectedMoneyPageSlug === "about") {
+                    return <AboutPage onBackToHub={() => navigateToPage(null)} />;
+                  }
+                  if (selectedMoneyPageSlug === "contact") {
+                    return <ContactPage onBackToHub={() => navigateToPage(null)} />;
+                  }
+                  if (selectedMoneyPageSlug === "categories") {
+                    return (
+                      <CategoriesPage
+                        categories={categories}
+                        moneyPages={moneyPages}
+                        onSelectCategory={(slug) => {
+                          setSelectedCategorySlug(slug);
+                          navigateToPage(null);
+                        }}
+                        onSelectPage={(slug) => {
+                          navigateToPage(slug);
+                        }}
+                        onBackToHub={() => navigateToPage(null)}
+                      />
+                    );
+                  }
+
                   const currPage = moneyPages.find((p) => p.slug === selectedMoneyPageSlug);
                   const parentCat = categories.find((c) => c.slug === currPage?.parentCategorySlug);
                   return currPage ? (
@@ -509,10 +573,11 @@ export default function App() {
             <p className="text-[10px]">PrairieSignal Field System &bull; Structured Programmatic SEO Affiliate Engine &copy; 2026</p>
           </div>
 
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-all">SITEMAP.XML</a>
-            <a href="#" className="hover:text-white transition-all">ROBOTS.TXT</a>
-            <a href="#" className="hover:text-white transition-all">AFFILIATE PRIVACY</a>
+          <div className="flex flex-wrap gap-4 sm:gap-6">
+            <button onClick={() => { navigateToPage("homepage"); setSelectedCategorySlug("all"); }} className="hover:text-white transition-all uppercase font-mono text-left">Homepage</button>
+            <button onClick={() => { navigateToPage("categories"); }} className="hover:text-white transition-all uppercase font-mono text-left">Categories</button>
+            <button onClick={() => { navigateToPage("about"); }} className="hover:text-white transition-all uppercase font-mono text-left">About Us</button>
+            <button onClick={() => { navigateToPage("contact"); }} className="hover:text-white transition-all uppercase font-mono text-left">Contact</button>
           </div>
         </div>
       </footer>

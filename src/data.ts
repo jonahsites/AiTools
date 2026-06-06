@@ -423,6 +423,84 @@ export const initialProducts: AffiliateProduct[] = [
     badge: "Best Desktop Integration",
     whatItDoes: "A productivity suite integrated directly inside the world's most popular student word editor, providing instant summaries and draft layouts.",
     whyItHelpsStudents: "It brings direct AI assistance directly into the document editor you already use, streamlining essay drafts and general summary tracking with zero extra tools to learn."
+  },
+  {
+    id: "motion",
+    name: "Motion Auto-Scheduler",
+    brand: "Motion",
+    rating: 4.6,
+    description: "An AI-powered calendar and task management tool that automatically schedules your tasks into your calendar based on deadlines, priorities, estimated duration, and your available time.",
+    affiliateUrl: "https://usemotion.com?source=studentai",
+    keyFeatures: [
+      "Automatically builds schedules and reshuffles missed tasks",
+      "Handles meeting scheduling and project management",
+      "Prioritizes competing deadlines automatically"
+    ],
+    pricePlan: "7-day free trial; ~$19/mo billed annually thereafter",
+    pros: [
+      "Takes the daily planning cognitive load totally off your plate",
+      "Auto-reschedules calendar blocks when real life interrupts",
+      "Integrates cleanly with Google Calendar"
+    ],
+    cons: [
+      "Expensive software without a permanent free tier",
+      "Demands high discipline in entering tasks accurately"
+    ],
+    badge: "Best Auto-Scheduler",
+    whatItDoes: "A dynamic calendar app that calculates priorities and auto-plots your tasks on your agenda.",
+    whyItHelpsStudents: "It eliminates procrastination through decision fatigue by telling you exactly what to work on and when."
+  },
+  {
+    id: "goblin-tools",
+    name: "Goblin Tools Focus Toolkit",
+    brand: "Goblin Tools",
+    rating: 4.8,
+    description: "A collection of simple, focused AI-powered tools designed to help with executive function challenges. The Magic To-Do breaks overwhelming tasks into manageable subtasks.",
+    affiliateUrl: "https://goblin.tools?source=studentai",
+    keyFeatures: [
+      "Magic To-Do breaks large tasks into specific actionable micro-steps",
+      "Tone estimator adjusts academic or email writing formality",
+      "Compiler distills messy brain-dumps into organized lists"
+    ],
+    pricePlan: "100% Free on Web; mobile apps cost ~$2 once",
+    pros: [
+      "Radically simple to operate with zero setup required",
+      "Completely free for students to access on web",
+      "Designed specifically to hurdle executive dysfunction blockades"
+    ],
+    cons: [
+      "Lacks deep integrated project syncing or calendar planning",
+      "Time estimates are generic and not user-specific"
+    ],
+    badge: "Best Task Breakdown",
+    whatItDoes: "A web tool suite that transforms scary projects into sequential micro-tasks.",
+    whyItHelpsStudents: "It stops you from feeling paralyzed by massive assignments by giving you your first step."
+  },
+  {
+    id: "claude-ai",
+    name: "Claude Academic Assistant",
+    brand: "Anthropic Claude",
+    rating: 4.8,
+    description: "Claude is a highly capable AI assistant specifically praised for long-document context, deep conceptual handling, and producing human-like, nuanced academic prose.",
+    affiliateUrl: "https://claude.ai?source=studentai",
+    keyFeatures: [
+      "Massive context window to process full research papers and texts",
+      "Refined, non-formulaic prose synthesis that reads far better than competitors",
+      "Less hallucination due to deeper constitutional training"
+    ],
+    pricePlan: "Free base access; Pro access at $20/month",
+    pros: [
+      "Outstanding nuance when handling philosophical, historical, or literature topics",
+      "Incredible at analyzing multi-chapter PDFs and synthesizing concepts",
+      "Will actually acknowledge uncertainty rather than inventing facts"
+    ],
+    cons: [
+      "Lacks the robust web browsing recency of ChatGPT",
+      "Slightly smaller ecosystem of integrations compared to OpenAI"
+    ],
+    badge: "Best Academic Writer",
+    whatItDoes: "A conversational text generation model engineered to produce thoughtful analysis and ingest vast amounts of document data securely.",
+    whyItHelpsStudents: "It is the superior drafting partner for essays, reading dense journal articles, and exploring complex conceptual debates."
   }
 ];
 
@@ -781,6 +859,119 @@ export const initialMoneyPages: MoneyPage[] = [
     views: 14100,
     isCustomGenerated: false,
     creationDate: "2026-06-05"
+  },
+  {
+    id: "productivity-article",
+    slug: "best-ai-productivity-tools-for-students",
+    title: "Best AI Productivity Tools for Students (2026)",
+    targetKeyword: "best AI productivity tools for students",
+    parentCategorySlug: "ai-productivity-tools",
+    introduction: "A practical guide to working smarter, stressing less, and actually enjoying the semester.\n\nLet's be honest about what student life actually looks like in 2026.\n\nYou're juggling five courses, each with its own submission portal, reading list, and professor who seems to believe theirs is the only class you're taking. You've got a part-time job, some version of a social life you're trying not to abandon entirely, and a growing suspicion that you forgot something important — you're just not sure what.\n\nThe productivity challenges students face haven't changed much over the years. They've just gotten denser. There's more information to process, more deadlines stacked on top of each other, more digital noise competing for your attention, and more pressure to perform across every dimension of life simultaneously.\n\nHere's where it gets interesting, though. The same era that created this overwhelming volume of work has also produced a generation of AI tools that are genuinely useful — not in a gimmicky, \"let the robot do your homework\" kind of way, but in a \"help me think more clearly, plan more realistically, and stop wasting two hours figuring out where to start\" kind of way.",
+    contentSections: [
+      {
+        heading: "Quick Answer: The Top Picks",
+        level: 2,
+        body: "If you're short on time (and when aren't you?), here's the summary:\n\n- **ChatGPT** — The versatile all-rounder for brainstorming, drafting, explaining concepts, and working through ideas at any hour.\n- **Notion AI** — The best workspace for students who want one place to organize notes, assignments, projects, and life.\n- **Motion** — An AI-powered calendar and task manager that automatically schedules your work around your real availability.\n- **Goblin Tools** — A simple, free set of tools designed specifically to help with task breakdown, prioritization, and executive function struggles.\n- **Perplexity AI** — A research assistant that gives you sourced, cited answers instead of making you wade through dozens of tabs."
+      },
+      {
+        heading: "ChatGPT",
+        level: 3,
+        body: "**What it does:**\nChatGPT is a conversational AI assistant built by OpenAI. You type a question, prompt, or request in natural language, and it responds with detailed, context-aware text.\n\n**Why students use it:**\nBecause it's like having a patient, always-available tutor who never makes you feel stupid for asking a question. At 2 a.m. the night before a paper is due, when the library is closed and your study group is asleep, [ChatGPT (Free & Plus)](/chatgpt-free) is there.\n\n**Best use cases:**\n- **Breaking down difficult concepts.** Ask it to explain the concept like you're a visual learner who understands cooking metaphors.\n- **Brainstorming paper topics.** Narrow down a thesis you're actually excited about.\n- **Creating study materials.** Generate 20 practice questions based on your lecture notes, then quiz yourself."
+      },
+      {
+        heading: "Notion AI",
+        level: 3,
+        body: "**What it does:**\nNotion is a flexible, all-in-one workspace where you can create notes, databases, wikis, task boards, calendars, and documents. Notion AI adds an artificial intelligence layer on top of this.\n\n**Why students use it:**\nBecause the biggest productivity problem most students face isn't laziness — it's fragmentation. [Notion AI Student Suite](/notion-ai) lets you consolidate everything into one system that actually makes sense.\n\n**Best use cases:**\n- **Building a semester dashboard.** See, at a glance, what's due this week across every class.\n- **Asking questions across your notes.** Notion's AI Q&A feature lets you type a question and it searches across all your workspace pages to find the answer."
+      },
+      {
+        heading: "Motion",
+        level: 3,
+        body: "**What it does:**\n[Motion Auto-Scheduler](/motion) is an AI-powered calendar and task management tool that automatically schedules your tasks into your calendar based on deadlines, priorities, estimated duration, and your available time.\n\n**Why students use it:**\nBecause planning *when* to do things is often harder than doing them. Motion takes the planning burden off your shoulders. Instead of staring at your to-do list trying to figure out when you'll write that lab report, Motion looks at your calendar, finds a realistic time slot, and puts it there."
+      },
+      {
+        heading: "Goblin Tools",
+        level: 3,
+        body: "**What it does:**\n[Goblin Tools Focus Toolkit](/goblin-tools) is a collection of simple, focused AI-powered tools designed to help with executive function challenges. \n\n**Why students use it:**\nBecause \"write research paper\" is not a task. It's a mountain. This tool takes the mountain and turns it into a staircase — a sequence of small, manageable steps you can actually start."
+      },
+      {
+        heading: "Perplexity AI",
+        level: 3,
+        body: "**What it does:**\n[Perplexity AI Search](/perplexity-ai) is an AI-powered research and answer engine. You ask a question in natural language, and it searches the web, synthesizes information from multiple sources, and presents a clear, readable answer with inline citations.\n\n**Best use cases:**\n- **Getting oriented on a new topic.** Get a comprehensive overview with links to seminal papers.\n- **Finding academic sources.** You switch to the Academic focus mode and search for recent peer-reviewed research."
+      }
+    ],
+    featuredProductId: "motion",
+    bestFreeProductId: "goblin-tools",
+    productReviewIds: ["chatgpt-free", "notion-ai", "motion", "goblin-tools", "perplexity-ai"],
+    comparisonTable: [
+      { productName: "ChatGPT", rating: "4.5/5", accuracy: "High", pricing: "Free / $20.00/mo", bestFor: "Brainstorming and concepts" },
+      { productName: "Notion AI", rating: "4.7/5", accuracy: "High", pricing: "Free / ~$8.00/mo", bestFor: "Organization and notes" },
+      { productName: "Motion", rating: "4.6/5", accuracy: "N/A", pricing: "Trial / $19/mo", bestFor: "Time management" },
+      { productName: "Goblin Tools", rating: "4.8/5", accuracy: "N/A", pricing: "Free web", bestFor: "Task breakdown" },
+      { productName: "Perplexity AI", rating: "4.7/5", accuracy: "High", pricing: "Free / $20/mo", bestFor: "Research and papers" }
+    ],
+    faqs: [
+      { question: "Is motion worth the cost for students?", answer: "Motion is an investment. It pays for itself if you consistently struggle with missing deadlines due to poor planning, but it's expensive if you only need a basic calendar." },
+      { question: "Are free AI productivity tools enough?", answer: "Yes. Goblin Tools paired with a free Google Calendar setup can solve procrastination for $0." }
+    ],
+    conclusion: "Best Overall: ChatGPT. It's the most versatile tool on this list. Best Free Option: Goblin Tools. It solves a specific, universal problem — \"I don't know where to start\". Best for Organization: Notion AI. Best for Research: Perplexity AI.",
+    views: 8230,
+    isCustomGenerated: true,
+    creationDate: "2026-06-06"
+  },
+  {
+    id: "chatgpt-vs-claude",
+    slug: "chatgpt-vs-claude-for-students",
+    title: "ChatGPT vs Claude for Students: Which AI Assistant Is Better in 2026?",
+    targetKeyword: "ChatGPT vs Claude for studying",
+    parentCategorySlug: "ai-study-homework",
+    introduction: "An honest comparison to help you pick the right tool — without wasting time trying both.\n\nIf you've spent any time using AI tools for schoolwork, you've probably run into this question: should I be using ChatGPT or Claude?\n\nThe comparison matters because these two tools, while similar on the surface, have real differences in how they approach certain tasks. They have different strengths when it comes to writing quality, how they handle long documents, how accurate they are on technical subjects, and how they communicate with users.\n\nThis article doesn't have a hidden agenda. The goal is simply to give you an honest, detailed look at both tools from a student's perspective.",
+    contentSections: [
+      {
+        heading: "Quick Verdict",
+        level: 2,
+        body: "- **Best overall:** ChatGPT — for its versatility, broader feature set, and the strength of its free tier.\n- **Best for writing:** Claude — its prose tends to feel more natural, nuanced, and less formulaic.\n- **Best for studying:** ChatGPT — stronger at generating practice questions, step-by-step explanations.\n- **Best free option:** A genuine tie."
+      },
+      {
+        heading: "What Is ChatGPT?",
+        level: 2,
+        body: "At its core, [ChatGPT (Free & Plus)](/chatgpt-free) is a large language model. For students, ChatGPT functions as a tutor, a writing assistant, a brainstorming partner, a research guide, and a study tool. It can explain concepts, generate practice tests, summarize readings, debug a programming assignment, or walk you through a math problem step by step."
+      },
+      {
+        heading: "What Is Claude?",
+        level: 2,
+        body: "Claude is an AI assistant developed by Anthropic. Anthropic built [Claude Academic Assistant](/claude-ai) with a focus on what they call \"constitutional AI\" — a training approach designed to make the model more helpful, honest, and less likely to produce harmful or misleading outputs. For students, its particular strengths tend to cluster around long-form writing quality, nuanced reasoning, and handling lengthy documents."
+      },
+      {
+        heading: "Homework Help",
+        level: 2,
+        body: "Both tools are solid for homework help, but they approach it differently. ChatGPT tends to be more immediately responsive and structured. Claude is less likely to give you a formulaic breakdown and more likely to explain the *why* behind a concept in a way that actually sticks.\n\n**Edge:** Slight ChatGPT advantage overall, with Claude preferred for humanities."
+      },
+      {
+        heading: "Essay Writing",
+        level: 2,
+        body: "If you use either tool to generate a draft essay and then read them side by side, the difference in writing quality is usually apparent. ChatGPT essays tend to be competent, well-structured, and clear — but they have a recognizable style. Claude's essays tend to feel more like they came from a thoughtful human writer.\n\n**Edge:** Claude, clearly."
+      },
+      {
+        heading: "Long Documents",
+        level: 2,
+        body: "This is one of Claude's most clear-cut advantages. Claude has one of the largest context windows available in any AI assistant — meaning it can process, hold in memory, and reason about very long documents in a single conversation.\n\n**Edge:** Claude, clearly."
+      }
+    ],
+    featuredProductId: "chatgpt-free",
+    bestFreeProductId: "claude-ai",
+    productReviewIds: ["chatgpt-free", "claude-ai"],
+    comparisonTable: [
+      { productName: "ChatGPT", rating: "4.5/5", accuracy: "Good", pricing: "Free / $20.00/mo", bestFor: "Studying, STEM, Versatility" },
+      { productName: "Claude", rating: "4.8/5", accuracy: "Excellent", pricing: "Free / $20.00/mo", bestFor: "Writing, Docs, Humanities" }
+    ],
+    faqs: [
+      { question: "Is Claude or ChatGPT better for essays?", answer: "Claude generally writes better essays because its prose feels more human, refined, and less formulaic than ChatGPT's predictable sentence structures." },
+      { question: "Is ChatGPT's free tier better than Claude's?", answer: "It's a tie depending on the need. ChatGPT has multimodal features for free, but Claude is better for raw text quality." }
+    ],
+    conclusion: "Does one beat the other? The honest answer is that the right choice depends on what you actually need most. Pick the one that fits your needs, take the time to learn how to prompt it well, and always bring your own critical thinking to whatever it produces.",
+    views: 13540,
+    isCustomGenerated: true,
+    creationDate: "2026-06-06"
   }
 ];
 
@@ -803,13 +994,13 @@ export const initialKeywords: KeywordPlanItem[] = [
   { id: "kw-11", keyword: "best AI transcription tools for students", searchVolume: 6700, difficulty: 25, intent: "Commercial", suggestedTitle: "Best AI Transcription Tools for Students: Turn Classroom Lecturing into Text", categorySlug: "ai-note-taking", status: "Planned" },
 
   // AI Productivity Cluster
-  { id: "kw-12", keyword: "best AI study planning tools", searchVolume: 5100, difficulty: 28, intent: "Commercial", suggestedTitle: "Best AI Study Planning Tools: Automate Your Course Timetable", categorySlug: "ai-productivity-tools", status: "Planned" },
+  { id: "kw-12", keyword: "best AI productivity tools for students", searchVolume: 5100, difficulty: 28, intent: "Commercial", suggestedTitle: "Best AI Productivity Tools for Students (2026)", categorySlug: "ai-productivity-tools", targetedPageSlug: "best-ai-productivity-tools-for-students", status: "Targeted" },
   { id: "kw-13", keyword: "best AI focus tools for students", searchVolume: 4300, difficulty: 22, intent: "Commercial", suggestedTitle: "Best AI Focus Tools for Students: Beat Distraction with Smart Study Routines", categorySlug: "ai-productivity-tools", status: "Planned" },
   { id: "kw-14", keyword: "best AI tools for time management", searchVolume: 5900, difficulty: 31, intent: "Commercial", suggestedTitle: "Best AI Tools for Time Management: Smart Planners & Calendars", categorySlug: "ai-productivity-tools", status: "Planned" },
 
   // LAYER 3: SUPPORTING PAGES
   { id: "kw-15", keyword: "Grammarly vs Quillbot comparison", searchVolume: 15400, difficulty: 48, intent: "Comparison", suggestedTitle: "Grammarly vs Quillbot: Which is Better for Students?", categorySlug: "ai-writing-tools", targetedPageSlug: "grammarly-vs-quillbot", status: "Targeted" },
-  { id: "kw-16", keyword: "ChatGPT vs Claude for studying", searchVolume: 9200, difficulty: 32, intent: "Comparison", suggestedTitle: "ChatGPT vs Claude for Studying: Which is Better for College?", categorySlug: "ai-study-homework", status: "Planned" },
+  { id: "kw-16", keyword: "ChatGPT vs Claude for studying", searchVolume: 9200, difficulty: 32, intent: "Comparison", suggestedTitle: "ChatGPT vs Claude for Studying: Which is Better for College?", categorySlug: "ai-study-homework", targetedPageSlug: "chatgpt-vs-claude-for-students", status: "Targeted" },
   { id: "kw-17", keyword: "Notion AI vs Evernote", searchVolume: 4100, difficulty: 27, intent: "Comparison", suggestedTitle: "Notion AI vs Evernote: Ultimate Student Note War", categorySlug: "ai-note-taking", status: "Planned" },
 
   { id: "kw-18", keyword: "free AI tools for students", searchVolume: 22000, difficulty: 51, intent: "Informational", suggestedTitle: "Best Free AI Study Tools for Students", categorySlug: "ai-study-homework", targetedPageSlug: "free-ai-study-tools", status: "Targeted" },
@@ -856,6 +1047,8 @@ export const linkingStrategies = {
     { source: "ai-writing-tools", target: "grammarly-vs-quillbot", explanation: "Category Hub links to Grammarly vs Quillbot showdown" },
     { source: "ai-study-homework", target: "best-ai-homework-helper-tools", explanation: "Category Hub links to homework helper guides" },
     { source: "ai-study-homework", target: "free-ai-study-tools", explanation: "Category Hub links to the $0 zero-budget guides" },
-    { source: "ai-note-taking", target: "best-ai-note-taking-tools-for-students", explanation: "Category Hub links to intelligent lecture note-taking apps" }
+    { source: "ai-note-taking", target: "best-ai-note-taking-tools-for-students", explanation: "Category Hub links to intelligent lecture note-taking apps" },
+    { source: "ai-productivity-tools", target: "best-ai-productivity-tools-for-students", explanation: "Category Hub links to productivity tools guides" },
+    { source: "ai-study-homework", target: "chatgpt-vs-claude-for-students", explanation: "Category Hub links to the ChatGPT vs Claude comparison" }
   ]
 };

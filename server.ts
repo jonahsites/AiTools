@@ -37,6 +37,44 @@ async function startServer() {
 
   // --- API ROUTES ---
 
+  // SEO Crawling Fallbacks
+  app.get("/robots.txt", (_req, res) => {
+    res.type("text/plain");
+    res.send(`User-agent: *\nAllow: /\n\nSitemap: https://ai-tools-ten-mu.vercel.app/sitemap.xml`);
+  });
+
+  app.get("/sitemap.xml", (_req, res) => {
+    res.type("application/xml");
+    res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ai-tools-ten-mu.vercel.app/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ai-tools-ten-mu.vercel.app/best-ai-homework-helper-tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-tools-ten-mu.vercel.app/best-ai-note-taking-tools-for-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-tools-ten-mu.vercel.app/best-ai-productivity-tools-for-students</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>`);
+  });
+
+  app.get("/googlea8cef84cd47f0db0.html", (_req, res) => {
+    res.type("html");
+    res.send("google-site-verification: googlea8cef84cd47f0db0.html");
+  });
+
   // Health check
   app.get("/api/health", (_req, res) => {
     res.json({ status: "ok", time: new Date().toISOString() });

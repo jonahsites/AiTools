@@ -1,0 +1,6 @@
+{
+  "name": "AI Tools for Students",
+  "description": "Programmatic SEO affiliate platform and generation system for high-intent student AI search traffic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

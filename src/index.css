@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #B85C38;
+  --color-brand-secondary: #E8E1D2;
+  --color-brand-tertiary: #8C8678;
+  --color-brand-neutral: #6E695E;
+  --color-brand-bg: #1F1D1A;
+  --color-brand-surface: #ECE9E2;
+  --color-brand-border: #C9C4B8;
+  --color-brand-accent: #B85C38;
+
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom CSS to enforce standard display characteristics of PrairieSignal design code */
+body {
+  background-color: #1F1D1A;
+  font-family: var(--font-sans);
+  color: #ECE9E2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbars matching the sand/charcoal theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1F1D1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #B85C38;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E8E1D2;
+}
+
+.gradient-shell {
+  padding: 1px;
+  background: linear-gradient(180deg, #C9C4B8, #ECE9E2);
+  border-radius: 0px;
+}
